@@ -8,16 +8,22 @@ public class Test : MonoBehaviour
     void Start()
     {
         //変数moneyを50で初期化
-        int money = 50;
-        //moneyの値が100以上の場合、「ポーションを買う」を表示する
-        if(money >= 100)
-        {
-            Debug.Log("ポーションを買う");
-        }
-        //moneyが100未満の場合、「武器を売る」を表示する
-        else
+        int money = 100;
+        //moneyの値が50以下の場合
+        if(money <= 50)
         {
             Debug.Log("武器を売る");
+        }
+        //moneyが200以上の場合
+        else if(money >= 200)
+        {
+            Debug.Log("武器を買う");
+        }
+        //変数moneyの値が上記以外の場合
+        else
+        {
+
+            Debug.Log("ポーションを買う");
         }
     }
 
