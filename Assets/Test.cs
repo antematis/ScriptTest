@@ -7,13 +7,13 @@ public class Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //変数を初期化
-        int a = 3;
-        int b = 4;
-        //変数aと変数bの加算した値を変数cに格納
-        int c = a + b;
-        //変数cの値を表示する
-        Debug.Log(c);
+        //変数moneyを200で初期化
+        int money = 200;
+        //moneyの値が100以上の場合、「ポーションを買う」を表示する
+        if(money >= 100)
+        {
+            Debug.Log("ポーションを買う");
+        }
     }
 
     // Update is called once per frame
