@@ -7,11 +7,16 @@ public class Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //変数iに1を足すのを5回繰り返す
-        for(int i = 0; i < 5; i++)
+        //sumを0で初期化する
+        int sum = 0;
+        //10回処理を繰り返す
+        for(int i = 0; i <= 10; i++)
         {
-            Debug.Log(i);
+            //iの値をsumに加算する
+            sum += i;
         }
+        //sumの値を表示する
+        Debug.Log(sum);
     }
 
     // Update is called once per frame
