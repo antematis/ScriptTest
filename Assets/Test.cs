@@ -7,20 +7,18 @@ public class Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //要素数5の配列を初期化
-        int[] position = new int[5];
+        //配列を初期化
+        int[] position = { 30, 20, 50, 10, 80, 15, 60, 100 };
 
-        //配列の各要素に値を格納
-        position[0] = 30;
-        position[1] = 20;
-        position[2] = 50;
-        position[3] = 10;
-        position[4] = 80;
-
-        //配列の要素をすべて表示する
-        for(int i = 0; i < 5; i++)
+        //配列の要素数だけ処理を繰り返す
+        for(int i = 0; i < position.Length; i++)
         {
-            Debug.Log(position[i]);
+            //配列の要素が50以上の場合
+            if (position[i] >= 50)
+            {
+                //配列の要素を表示する
+                Debug.Log(position[i]);
+            }
         }
 
     }
