@@ -7,12 +7,11 @@ public class Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //numを1で初期化
-        int num = 1;
-        //valに格納する値を条件によって変える
-        int val = (num == 1) ? -100 : 100;
-        //valの値を表示する
-        Debug.Log(val);
+        //変数iに1を足すのを5回繰り返す
+        for(int i = 0; i < 5; i++)
+        {
+            Debug.Log(i);
+        }
     }
 
     // Update is called once per frame
