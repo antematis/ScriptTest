@@ -7,16 +7,22 @@ public class Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //sumを0で初期化する
-        int sum = 0;
-        //10回処理を繰り返す
-        for(int i = 0; i <= 10; i++)
+        //要素数5の配列を初期化
+        int[] position = new int[5];
+
+        //配列の各要素に値を格納
+        position[0] = 30;
+        position[1] = 20;
+        position[2] = 50;
+        position[3] = 10;
+        position[4] = 80;
+
+        //配列の要素をすべて表示する
+        for(int i = 0; i < 5; i++)
         {
-            //iの値をsumに加算する
-            sum += i;
+            Debug.Log(position[i]);
         }
-        //sumの値を表示する
-        Debug.Log(sum);
+
     }
 
     // Update is called once per frame
