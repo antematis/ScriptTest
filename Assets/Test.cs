@@ -11,7 +11,16 @@ public class Boss
     //MP
     private int mp = 53;
     //魔法を使うときのMPの消費値
-    private const int consumeMp = 5;
+    private const int _consumeMp = 5;
+    //体力の最小値
+    private const int _minHp = 0;
+    //MPの最小値
+    private const int _minMp = 0;
+    //魔法の使用条件のフラグ
+    bool IsUseMagic
+    {
+        get => _consumeMp <= this.mp;
+    }
 
     //攻撃用の関数
     public void Attack()
@@ -23,9 +32,9 @@ public class Boss
     public void Magic()
     {
         //現在のMPの値が消費されるMP値以上の場合
-        if(consumeMp <= this.mp)
+        if(IsUseMagic)
         {
-            this.mp -= consumeMp;
+            this.mp = Mathf.Max(_minMp, this.mp - _consumeMp);
             Debug.LogFormat("魔法攻撃をした。残りMPは{0}。", this.mp);
         }
         //現在のMPが消費されるMP値よりも少ない場合
@@ -40,7 +49,7 @@ public class Boss
     {
         Debug.Log(damage + "のダメージを受けた");
         //残りhpを減らす
-        this.hp -= damage;
+        this.hp = Mathf.Max(_minHp, this.hp - damage);
     }
 }
 
